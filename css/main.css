@@ -1,23 +1,75 @@
-
 /* start at mobile size, and work up from there */
-.box1{
-	width: 300px;
+main{
+	width: 95%;
+	margin: 0 auto;
+}
+main > div {display:inline-block;}
+/*mobile first =>*/
+.box1 {
+	width: 100%;
 	height: 300px;
 	background-color: blue;
+	display: block;
 
 }
 
-.box2{
-	width: 300px;
+.box2 {
+	width: 100%;
 	height: 300px;
 	background-color: red;
+	display: block;
 }
-/*  This is a basic media query */
+.description{
+	display: none;
+}
+@media screen and (max-width:376px) {
+	.box1{
+		background-color: yellow;
+		display: inline-block;
+		width:48%;
+	}
+   .box2{
+   	background-color: orange;
+   	display: inline-block;
+   	width: 48%;
+   }
+
+.description{
+	display: none;
+   }
+}
+@media screen and (min-width:768px) {
+	.box1{
+		background-color: green;
+		display: inline-block;
+		width: 65%;
+	}
+
+    .box2{
+  	display: none;
+  	}
+  .description{
+  	display: block;
+  }
+	
+
+.image-contatiner{
+	width: 30%;
+	display:block;
+}
+}
+
+
+
+img,video,object,embed{
+	max-width: 100%;
+}
+
+/* this is a basic media query */
 
 /* change the layout when we're viewing the app on a phone */
 
-@media only screen and (min-device-width: 320px;) and (max-device-width: 480px;)
-{
-	.box1
-		{background-color: yellow;}
-}
+/*@media only screen and (min-device-width: 320px) and (max-device-width: 480px)
+   {
+   	.box1 { background-color: yellow; }
+}*/

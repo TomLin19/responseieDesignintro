@@ -1,1 +1,1 @@
-# responseieDesignintro
+# responsiveDesignIntro
